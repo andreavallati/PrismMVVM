@@ -1,0 +1,86 @@
+﻿<UserControl
+    x:Class="PrismMVVM.Views.SumView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="{DynamicResource WindowBackgroundBrush}"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/PrismMVVM;Component/ViewResources/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border BorderBrush="Orange" BorderThickness="1">
+        <StackPanel>
+
+            <WrapPanel Margin="8">
+                <TextBlock
+                    MinWidth="150"
+                    MinHeight="30"
+                    VerticalAlignment="Center"
+                    FontFamily="Verdana"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="Gainsboro"
+                    Text="All Names: " />
+                <TextBlock
+                    MinWidth="120"
+                    MinHeight="30"
+                    VerticalAlignment="Center"
+                    FontFamily="Verdana"
+                    FontSize="20"
+                    Foreground="Orange"
+                    Text="{Binding FullNames}" />
+            </WrapPanel>
+
+            <WrapPanel Margin="8">
+                <TextBlock
+                    MinWidth="150"
+                    MinHeight="30"
+                    VerticalAlignment="Center"
+                    FontFamily="Verdana"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="Gainsboro"
+                    Text="Age Sum: " />
+                <TextBlock
+                    MinWidth="120"
+                    MinHeight="30"
+                    VerticalAlignment="Center"
+                    FontFamily="Verdana"
+                    FontSize="20"
+                    Foreground="Orange"
+                    Text="{Binding AgeSum}" />
+            </WrapPanel>
+
+            <WrapPanel Margin="8">
+                <TextBlock
+                    MinWidth="150"
+                    MinHeight="30"
+                    VerticalAlignment="Center"
+                    FontFamily="Verdana"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="Gainsboro"
+                    Text="Salary Sum: " />
+                <TextBlock
+                    MinWidth="120"
+                    MinHeight="30"
+                    VerticalAlignment="Center"
+                    FontFamily="Verdana"
+                    FontSize="20"
+                    Foreground="Orange"
+                    Text="{Binding SalarySum}" />
+            </WrapPanel>
+
+        </StackPanel>
+    </Border>
+
+</UserControl>
